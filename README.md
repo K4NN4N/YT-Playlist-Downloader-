@@ -35,7 +35,7 @@ The YouTube Playlist Downloader script is a robust and user-friendly tool design
 
 2. Make the script executable:
    ```bash
-   chmod +x YouTube\ Playlist\ Downloader.sh
+   chmod +x YouTube\ Playlist\ YouTube Playlist Downloader.sh
    ```
 
 #### Usage
