@@ -1,7 +1,7 @@
 
 
 
-```markdown
+
 # YouTube Playlist Downloader
 
 ## Description
@@ -23,6 +23,7 @@ The YouTube Playlist Downloader script is a robust and user-friendly tool design
 3. Retry Mechanism: If a download fails, the script will automatically retry up to 10 times before skipping the file.
 4. Post-Download Options: After the download completes, users can choose to retry failed downloads, check for playlist updates, or exit the script.
 
+```markdown
 ### Installation and Usage
 
 #### Installation
@@ -32,7 +33,6 @@ The YouTube Playlist Downloader script is a robust and user-friendly tool design
    git clone https://github.com/K4NN4N/YT-Playlist-Downloader-.git
    cd YT-Playlist-Downloader-
    ```
-
 2. Make the script executable:
    ```bash
    chmod +x YouTube\ Playlist\ YouTube Playlist Downloader.sh
