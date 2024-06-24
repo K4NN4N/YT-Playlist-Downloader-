@@ -38,9 +38,8 @@ bash --version
 2. Navigate to the directory where you want to clone the repository.
 3. Run the following command:
    ```
-   git clone https://github.com/yourusername/youtube-playlist-downloader.git
+   git clone https://github.com/K4NN4N/youtube-playlist-downloader.git
    ```
-   Replace `yourusername` with your actual GitHub username.
 4. Navigate into the cloned directory:
    ```
    cd youtube-playlist-downloader
@@ -52,13 +51,13 @@ If you don't want to clone the entire repository, you can download the script di
 
 1. Using curl:
    ```
-   curl -O https://raw.githubusercontent.com/yourusername/youtube-playlist-downloader/main/youtube-playlist-downloader.sh
+   curl -O https://raw.githubusercontent.com/K4NN4N/youtube-playlist-downloader/main/youtube-playlist-downloader.sh
    ```
    Or using wget:
    ```
-   wget https://raw.githubusercontent.com/yourusername/youtube-playlist-downloader/main/youtube-playlist-downloader.sh
+   wget https://raw.githubusercontent.com/K4NN4N/youtube-playlist-downloader/main/youtube-playlist-downloader.sh
    ```
-   Replace `yourusername` with your actual GitHub username.
+ 
 
 2. Make the script executable:
    ```
