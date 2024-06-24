@@ -1,70 +1,139 @@
-
-
-
-
 # YouTube Playlist Downloader
 
-## Description
+A Bash script for easily downloading audio from YouTube playlists using yt-dlp, compatible with Unix-like environments and Termux on Android.
 
-The YouTube Playlist Downloader script is a robust and user-friendly tool designed to help users download audio files from YouTube playlists. Leveraging the power of `yt-dlp`, this script allows you to extract high-quality audio from YouTube videos and save them in various formats. Additionally, the script supports embedding album art, automatically retrying failed downloads, and checking for updates in the playlist.
+## Features
 
-### Key Features
+- **K4NN4N's Choice**: Start downloads using predefined settings optimized for high-quality audio.
+- **Custom Options**: Customize download settings including directory, audio quality, format, and thumbnail saving.
+- **Retry Logic**: Automatically retry failed downloads up to 10 times before skipping.
+- **Retry Failed Downloads**: Easily retry downloads for any files that failed in previous attempts.
+- **Check for Updates**: Check for updates in the playlist and download new or updated videos.
+- **User-Friendly Interface**: Interactive menu for easy navigation and selection of options.
 
-- Easy to Use: Provides a simple interface for downloading audio files from YouTube playlists.
-- Customizable Settings: Offers various options to customize download settings, including directory, audio quality, format, and thumbnail saving.
-- Automatic Retries: Implements a retry mechanism to handle failed downloads, ensuring a smooth downloading experience.
-- Playlist Updates: Checks for new or updated videos in the playlist and downloads them, keeping your collection up-to-date.
-- Progress Bar: Displays a progress bar with numbers from 1 to 100%, providing a visual representation of the download progress.
+## Requirements
 
-### How It Works
+### For Unix-like Systems (Linux, macOS, Windows with WSL or Git Bash):
+- Bash: Version 4.0 or higher
+- yt-dlp: The script will check if it's installed and provide installation instructions if it's not
+- curl or wget: For downloading the script (if not cloning the repository)
+- Git: For cloning the repository (optional)
 
-1. Download Selection: The script allows users to choose between default settings (K4NN4N's Choice) or custom settings for their downloads.
-2. Custom Options: Users can specify the download directory, choose audio quality and format, and decide whether to save thumbnails.
-3. Retry Mechanism: If a download fails, the script will automatically retry up to 10 times before skipping the file.
-4. Post-Download Options: After the download completes, users can choose to retry failed downloads, check for playlist updates, or exit the script.
+### For Termux on Android:
+- Termux app installed from [F-Droid](https://f-droid.org/en/packages/com.termux/) (recommended) or Google Play Store
+- Bash (pre-installed in Termux)
+- yt-dlp (installation instructions provided below)
+- Git (optional, for cloning the repository)
 
-```markdown
-### Installation and Usage
+To check your Bash version, run:
+```
+bash --version
+```
 
-#### Installation
+## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/K4NN4N/YT-Playlist-Downloader-.git
-   cd YT-Playlist-Downloader-
+### Option 1: Cloning the Repository
+
+1. Open your terminal (or Termux on Android).
+2. Navigate to the directory where you want to clone the repository.
+3. Run the following command:
    ```
+   git clone https://github.com/yourusername/youtube-playlist-downloader.git
+   ```
+   Replace `yourusername` with your actual GitHub username.
+4. Navigate into the cloned directory:
+   ```
+   cd youtube-playlist-downloader
+   ```
+
+### Option 2: Downloading the Script Directly
+
+If you don't want to clone the entire repository, you can download the script directly:
+
+1. Using curl:
+   ```
+   curl -O https://raw.githubusercontent.com/yourusername/youtube-playlist-downloader/main/youtube-playlist-downloader.sh
+   ```
+   Or using wget:
+   ```
+   wget https://raw.githubusercontent.com/yourusername/youtube-playlist-downloader/main/youtube-playlist-downloader.sh
+   ```
+   Replace `yourusername` with your actual GitHub username.
+
 2. Make the script executable:
-   ```bash
-   chmod +x YouTube\ Playlist\ YouTube Playlist Downloader.sh
+   ```
+   chmod +x youtube-playlist-downloader.sh
    ```
 
-#### Usage
+### Termux-Specific Setup
 
-To download audio files from a YouTube playlist, follow these steps:
+If you're using Termux on Android, follow these additional steps:
 
-1. Run the script in a terminal:
-   ```bash
-   ./YouTube\ Playlist\ Downloader.sh
+1. Update and upgrade Termux packages:
+   ```
+   pkg update && pkg upgrade
    ```
 
-2. Choose an option from the menu:
-   - Help: Displays detailed information about the script and its features.
-   - Retry Failed Downloads: Attempts to download any files that failed in previous attempts.
-   - K4NN4N's Choice: Starts downloads using predefined settings optimized for high-quality audio.
-   - Custom Options: Customize download settings including directory, audio quality, format, and thumbnail saving.
+2. Install required packages:
+   ```
+   pkg install python ffmpeg
+   ```
 
-3. Enter the YouTube playlist URL when prompted.
+3. Install yt-dlp using pip:
+   ```
+   pip install yt-dlp
+   ```
 
-4. Monitor the progress as the script downloads the audio files.
+4. Grant storage permission to Termux (if not already granted):
+   ```
+   termux-setup-storage
+   ```
 
-5. After downloading, choose to retry failed downloads, check for updates in the playlist, or exit.
+## Usage
 
-### Script File
+1. Run the script:
+   ```
+   ./youtube-playlist-downloader.sh
+   ```
+2. Follow the on-screen prompts to select your desired options:
+   - Choose between K4NN4N's Choice (default settings) or custom options
+   - Enter the YouTube playlist URL when prompted
+   - Monitor the download progress
+   - Choose post-download options (retry failed downloads, check for updates, or exit)
 
-The main script file `YouTube Playlist Downloader.sh` is included in the repository for executing the YouTube Playlist downloading.
+## Options
 
-### Contributing and Support
+- **K4NN4N's Choice**: Uses default settings optimized for high-quality audio (320K mp3 with embedded thumbnails).
+- **Custom Options**: Allows you to set:
+  - Download directory
+  - Audio quality (320K, 256K, 192K, 128K, 96K)
+  - Audio format (mp3, aac, flac, m4a, opus, vorbis)
+  - Thumbnail saving
+  - Download order (normal or reverse)
 
-Contributions to the project are welcome! Feel free to fork the repository and submit a pull request with your improvements. For any issues or questions, refer to the contact information provided in the credits section.
+## Troubleshooting
 
----
+- If you encounter the error "yt-dlp: command not found", the script will provide instructions on how to install yt-dlp. Follow the provided instructions to install yt-dlp on your system.
+- For Termux users, ensure you've granted storage permissions to Termux if you're having issues accessing the download directory.
+- If you're using Windows, make sure you're running the script in a Unix-like environment such as Git Bash or WSL (Windows Subsystem for Linux).
+- Ensure you have the necessary permissions to write to the download directory.
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/yourusername/youtube-playlist-downloader/issues) if you want to contribute.
+
+## Author
+
+👤 **K4NN4N**
+
+- GitHub: [@K4NN4N](https://github.com/K4NN4N)
+- Twitter: [@K4NN4N](https://twitter.com/K4NN4N_)
+- LinkedIn: [@K4NN4N](https://www.linkedin.com/in/K4NN4N/)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
