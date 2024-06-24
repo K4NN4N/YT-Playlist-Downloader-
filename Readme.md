@@ -42,7 +42,7 @@ bash --version
    ```
 4. Navigate into the cloned directory:
    ```
-   cd youtube-playlist-downloader-
+   cd YT-Playlist-Downloader-
    ```
 
 ### Option 2: Downloading the Script Directly
